@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:orientation="vertical"
+        android:weightSum="10"
+        app:layout_constraintBottom_toTopOf="@+id/lvNoiDung"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/edtTen"
+            android:layout_width="376dp"
+            android:layout_height="78dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="19dp"
+            android:layout_weight="5"
+            android:background="#C4C4C4"
+            android:drawableLeft="@drawable/vector__9_"
+            android:ems="10"
+            android:hint=" The place that you will visit in \n the future"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <Button
+                android:id="@+id/btnThem"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_weight="4"
+                android:backgroundTint="#C94820"
+                android:text="Save"
+                app:layout_constraintBottom_toTopOf="@+id/lvNoiDung"
+                app:layout_constraintEnd_toStartOf="@+id/btnCC"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtTen"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="73dp"
+                android:layout_weight="2" />
+
+
+            <Button
+                android:id="@+id/btnCC"
+                android:layout_width="0dp"
+                android:layout_height="73dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="4"
+                android:backgroundTint="#C94820"
+                android:text="Cancel"
+                app:layout_constraintBottom_toTopOf="@+id/lvNoiDung"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtTen"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/lvNoiDung"
+        android:layout_width="367dp"
+        android:layout_height="520dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="16dp"
+
+
+        android:dividerHeight="20dp"
+        android:divider="@color/white"
+
+        android:listSelector="@color/cardview_shadow_start_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</LinearLayout>
